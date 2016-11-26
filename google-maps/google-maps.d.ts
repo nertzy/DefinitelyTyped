@@ -6,8 +6,9 @@
 /// <reference path="../googlemaps/google.maps.d.ts" />
 
 declare namespace GoogleMapsLoader {
+    type googleAPI = { maps: typeof google.maps };
     interface CallBack {
-        (google: { maps: { Map: google.maps.Map } }): void;
+        (google: googleAPI): void;
     }
     export var KEY: string;
     export var CLIENT: string;
